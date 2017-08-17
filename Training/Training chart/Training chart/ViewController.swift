@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lineView: LineChartView!
     
     var data : [Double] = [Double(arc4random_uniform(14) + 1)]
+    var data2 : [Double] = [Double(arc4random_uniform(14) + 1)]
 
     var timer = Timer()
 
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         for _ in 1...14 {
         data.append(Double(arc4random_uniform(14) + 1))
+            data2.append(Double(arc4random_uniform(14) + 1))
+
         }
         
         Timer.scheduledTimer(timeInterval: 1/10, target: self, selector: #selector(updateChartWithData2), userInfo: nil, repeats: true)
@@ -37,6 +40,8 @@ class ViewController: UIViewController {
         print(data)
         data.remove(at: 0)
         data.append(Double(arc4random_uniform(14) + 1))
+        data2.remove(at: 0)
+        data2.append(Double(arc4random_uniform(14) + 1))
         
         
     }
@@ -50,11 +55,19 @@ class ViewController: UIViewController {
             let dataEntry = ChartDataEntry(x: Double(i), y: Double(data[i]))
             dataEntries.append(dataEntry)
         }
-        let chartDataSet = LineChartDataSet(values: dataEntries, label: "Visitor count")
-        chartDataSet.drawCirclesEnabled = false
         
+        var dataEntries2: [ChartDataEntry] = []
+        for i in 0..<data2.count {
+            let dataEntry2 = ChartDataEntry(x: Double(i), y: Double(data2[i]))
+            dataEntries2.append(dataEntry2)
+        }
         
-        let chartData = LineChartData(dataSet: chartDataSet)
+        let chartDataSet = [LineChartDataSet(values: dataEntries, label: "Visitor count"),LineChartDataSet(values: dataEntries2, label: "Visitor count 2")]
+        chartDataSet[0].drawCirclesEnabled = false
+        chartDataSet[1].drawCirclesEnabled = false
+
+        let chartData = LineChartData(dataSets: chartDataSet)
+        
         lineView.data = chartData
     }
     
