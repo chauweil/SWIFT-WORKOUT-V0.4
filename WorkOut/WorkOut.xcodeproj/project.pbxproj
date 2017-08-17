@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F14DD331F1BCDCF00472839 /* LastSaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F14DD321F1BCDCF00472839 /* LastSaveViewController.swift */; };
 		1F2388D21F1A3E4700E30CC1 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2388D11F1A3E4700E30CC1 /* SerieViewController.swift */; };
 		1FF1FBEB1F196AC40003CADD /* ViewControllerConnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF1FBEA1F196AC40003CADD /* ViewControllerConnexion.swift */; };
 		1FF916A51F125E3200F92696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF916A41F125E3200F92696 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F14DD321F1BCDCF00472839 /* LastSaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastSaveViewController.swift; sourceTree = "<group>"; };
 		1F2388D11F1A3E4700E30CC1 /* SerieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
 		1FF1FBEA1F196AC40003CADD /* ViewControllerConnexion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerConnexion.swift; sourceTree = "<group>"; };
 		1FF916A11F125E3200F92696 /* WorkOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				1FF916B31F125E3200F92696 /* Info.plist */,
 				1FF916AB1F125E3200F92696 /* WorkOut.xcdatamodeld */,
 				1FF1FBEA1F196AC40003CADD /* ViewControllerConnexion.swift */,
+				1F14DD321F1BCDCF00472839 /* LastSaveViewController.swift */,
 			);
 			path = WorkOut;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				1FF916AD1F125E3200F92696 /* WorkOut.xcdatamodeld in Sources */,
 				1FF916A71F125E3200F92696 /* ViewController.swift in Sources */,
 				1FF916A51F125E3200F92696 /* AppDelegate.swift in Sources */,
+				1F14DD331F1BCDCF00472839 /* LastSaveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

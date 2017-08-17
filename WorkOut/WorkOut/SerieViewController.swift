@@ -37,24 +37,60 @@ class SerieViewController: UIViewController {
     }
     
     @IBAction func Serie2(_ sender: UIStepper) {
+        text2.text = String(sender.value)
+
     }
     
     
     @IBAction func Serie3(_ sender: UIStepper) {
+        text3.text = String(sender.value)
+
     }
     
     
     
     @IBAction func Serie4(_ sender: UIStepper) {
+        text4.text = String(sender.value)
+
     }
-    
     
     
     @IBAction func Serie5(_ sender: UIStepper) {
+        text5.text = String(sender.value)
+
     }
     @IBAction func Serie6(_ sender: UIStepper) {
+        text6.text = String(sender.value)
+
     }
     
+    
+    
+    @IBAction func saveSeries(_ sender: UIButton) {
+        
+      let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let serie=Series(context: context)
+        
+    
+        
+        let user=User(context: context)
+        user.name="jeff"
+        user.id=14
+        
+    serie.rep1 = Double(text1.text!)!
+    serie.rep2 = Double(text2.text!)!
+    serie.rep3 = Double(text3.text!)!
+    serie.rep4 = Double(text4.text!)!
+    serie.rep5 = Double(text5.text!)!
+    serie.rep6 = Double(text6.text!)!
+    serie.date = NSDate()
+    serie.user=user
+        
+    (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        
+    }
     
     /*
     // MARK: - Navigation

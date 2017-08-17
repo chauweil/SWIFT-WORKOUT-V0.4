@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f657ec36-f44f-4b5f-9721-55eea74eda19" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Swift Overview.playground/playground.xcworkspace/xcuserdata/jeff.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion.xcodeproj/project.xcworkspace/xcuserdata/jeff.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/001-padlock.imageset/001-padlock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/002-lock.imageset/002-lock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/003-arroba.imageset/003-arroba.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/004-email.imageset/004-email.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/005-login.imageset/005-login.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/3131a51d5077aaae22d46d69eace1bfc.imageset/3131a51d5077aaae22d46d69eace1bfc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor.xcodeproj/project.xcworkspace/xcuserdata/jeff.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell.xcodeproj/project.xcworkspace/xcuserdata/jeff.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1.xcodeproj/project.xcworkspace/xcuserdata/jeff.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/001-error.imageset/001-error.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/002-interface.imageset/002-interface.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/003-arrows.imageset/003-arrows.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/004-up-arrow.imageset/004-up-arrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/27375999-blur-wallpapers.imageset/27375999-blur-wallpapers.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/2aff1dd344f3bc735a20126e6110e633.imageset/2aff1dd344f3bc735a20126e6110e633.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/98ac896d880f02846de50014796cd004 (1).imageset/98ac896d880f02846de50014796cd004 (1).jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/abs.imageset/abs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/abs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/first.imageset/first.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/pu.imageset/pu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/second.imageset/second.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion.xcodeproj/xcuserdata/jeff.xcuserdatad/xcschemes/Training Motion.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion.xcodeproj/xcuserdata/jeff.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/AppDelegate.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/001-padlock.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/002-lock.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/003-arroba.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/004-email.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/005-login.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/3131a51d5077aaae22d46d69eace1bfc.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Assets.xcassets/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Base.lproj/LaunchScreen.storyboard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Base.lproj/Main.storyboard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/TemporyViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/Training_Motion.xcdatamodeld/Training_Motion.xcdatamodel/contents" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/ViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training Motion/Training Motion/ViewController_Login.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor.xcodeproj/xcuserdata/jeff.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor.xcodeproj/xcuserdata/jeff.xcuserdatad/xcschemes/Training sensor.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor.xcodeproj/xcuserdata/jeff.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor/AppDelegate.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor/Assets.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor/Base.lproj/LaunchScreen.storyboard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor/Base.lproj/Main.storyboard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor/Training_sensor.xcdatamodeld/.xccurrentversion" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor/Training_sensor.xcdatamodeld/Training_sensor.xcdatamodel/contents" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training sensor/Training sensor/ViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell.xcodeproj/xcuserdata/jeff.xcuserdatad/xcschemes/Training_CustomCell.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell.xcodeproj/xcuserdata/jeff.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/AppDelegate.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/Assets.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/Base.lproj/LaunchScreen.storyboard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/Base.lproj/Main.storyboard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/CustomCeller.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/CustomCeller.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/Training_CustomCell.xcdatamodeld/.xccurrentversion" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/Training_CustomCell.xcdatamodeld/Training_CustomCell.xcdatamodel/contents" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Training/Training_CustomCell/Training_CustomCell/ViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/WorkOut/WorkOut/LastSaveViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1.xcodeproj/xcuserdata/jeff.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1.xcodeproj/xcuserdata/jeff.xcuserdatad/xcschemes/Workout V0.1.xcscheme" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1.xcodeproj/xcuserdata/jeff.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/AppDelegate.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/001-error.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/002-interface.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/003-arrows.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/004-up-arrow.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/27375999-blur-wallpapers.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/2aff1dd344f3bc735a20126e6110e633.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/98ac896d880f02846de50014796cd004 (1).imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/abs.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/first.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/pu.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Assets.xcassets/second.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Base.lproj/LaunchScreen.storyboard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Base.lproj/Main.storyboard" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/FirstViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/Model.xcdatamodeld/Model.xcdatamodel/contents" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/SecondViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/ThirdViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/customCell.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Workout V0.1/Workout V0.1/customCell.xib" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Swift Overview.playground/playground.xcworkspace/xcuserdata/jeff.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rsa" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rsa.pub" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Beginning Swift Games Development for iOS.pdf" afterPath="$PROJECT_DIR$/Books/Beginning Swift Games Development for iOS.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Beginning iPhone Development with Swift 3.pdf" afterPath="$PROJECT_DIR$/Books/Beginning iPhone Development with Swift 3.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Build iOS Database Apps with Swift and SQLite.pdf" afterPath="$PROJECT_DIR$/Books/Build iOS Database Apps with Swift and SQLite.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Practical Swift.pdf" afterPath="$PROJECT_DIR$/Books/Practical Swift.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Programming iOS 10.pdf" afterPath="$PROJECT_DIR$/Books/Programming iOS 10.pdf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/Books/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Swift Overview.playground/Contents.swift" afterPath="$PROJECT_DIR$/Training/Swift Overview.playground/Contents.swift" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Swift Overview.playground/contents.xcplayground" afterPath="$PROJECT_DIR$/Training/Swift Overview.playground/contents.xcplayground" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Swift Overview.playground/playground.xcworkspace/contents.xcworkspacedata" afterPath="$PROJECT_DIR$/Training/Swift Overview.playground/playground.xcworkspace/contents.xcworkspacedata" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/iOS 10 Swift Programming Cookbook.pdf" afterPath="$PROJECT_DIR$/Books/iOS 10 Swift Programming Cookbook.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkOut/WorkOut.xcodeproj/project.xcworkspace/xcuserdata/jeff.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/WorkOut/WorkOut.xcodeproj/project.xcworkspace/xcuserdata/jeff.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkOut/WorkOut.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/WorkOut/WorkOut.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkOut/WorkOut.xcodeproj/xcuserdata/jeff.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/WorkOut/WorkOut.xcodeproj/xcuserdata/jeff.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkOut/WorkOut/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/WorkOut/WorkOut/Base.lproj/Main.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkOut/WorkOut/SerieViewController.swift" afterPath="$PROJECT_DIR$/WorkOut/WorkOut/SerieViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WorkOut/WorkOut/WorkOut.xcdatamodeld/WorkOut.xcdatamodel/contents" afterPath="$PROJECT_DIR$/WorkOut/WorkOut/WorkOut.xcdatamodeld/WorkOut.xcdatamodel/contents" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="67" />
+    <option name="y" value="23" />
+    <option name="width" value="1373" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f657ec36-f44f-4b5f-9721-55eea74eda19" name="Default" comment="" />
+      <created>1502009461626</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1502009461626</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="23" width="1373" height="877" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
