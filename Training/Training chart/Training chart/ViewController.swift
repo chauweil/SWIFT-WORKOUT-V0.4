@@ -100,8 +100,13 @@ class ViewController: UIViewController {
         lineView.xAxis.labelPosition = XAxis.LabelPosition.bottom
         lineView.chartDescription?.text = ""
 
-
+        
+        
         lineView.data = chartData
+        
+        lineView.leftAxis.valueFormatter=DefaultAxisValueFormatter(block: {(value, _) in
+            return String(Int(value)) + " G"
+        })
     }
     
     
@@ -128,4 +133,3 @@ class ViewController: UIViewController {
 
     
 }
-
