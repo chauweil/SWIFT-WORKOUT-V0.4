@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Zg-2d-zIo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3Zg-2d-zIo">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -169,13 +169,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbO-tn-Pg0" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="329" width="320" height="231"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Egu-M6-DNL" firstAttribute="width" secondItem="OfX-GA-BaV" secondAttribute="width" id="1gU-wV-Hvq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hbO-tn-Pg0" secondAttribute="bottom" constant="8" id="4KF-CE-kDr"/>
                             <constraint firstItem="kjx-rW-cHB" firstAttribute="width" secondItem="OfX-GA-BaV" secondAttribute="width" id="55t-b0-ZP7"/>
+                            <constraint firstItem="hbO-tn-Pg0" firstAttribute="top" secondItem="kjx-rW-cHB" secondAttribute="bottom" constant="8" id="9gg-kM-M4s"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OfX-GA-BaV" secondAttribute="bottom" id="Cxg-Ay-eMQ"/>
                             <constraint firstItem="Egu-M6-DNL" firstAttribute="centerX" secondItem="OfX-GA-BaV" secondAttribute="centerX" id="Dow-Ig-d50"/>
+                            <constraint firstAttribute="trailing" secondItem="hbO-tn-Pg0" secondAttribute="trailing" id="FOq-kp-moO"/>
                             <constraint firstItem="Egu-M6-DNL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="GOt-Si-fah"/>
                             <constraint firstItem="kjx-rW-cHB" firstAttribute="centerX" secondItem="OfX-GA-BaV" secondAttribute="centerX" id="IPw-Ns-mKr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OfX-GA-BaV" secondAttribute="bottom" id="It7-vB-gAN"/>
@@ -184,15 +191,17 @@
                             <constraint firstItem="OfX-GA-BaV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="RaL-dQ-iFM"/>
                             <constraint firstItem="OfX-GA-BaV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SV4-tr-h2L"/>
                             <constraint firstItem="OfX-GA-BaV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="gFu-3H-eHg"/>
+                            <constraint firstItem="hbO-tn-Pg0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kmE-zT-1iT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lineView" destination="hbO-tn-Pg0" id="jhE-BH-b9w"/>
                         <outlet property="userText" destination="eew-uq-mwh" id="OOK-Pl-YqJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141.59999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="140.625" y="138.38028169014083"/>
         </scene>
     </scenes>
     <resources>

@@ -37,6 +37,10 @@ print(arr)
 for i in arr
     {print(i)}
 
+var index=0...(arr.count-1)
+print(index)
+arr[index]
+
 //------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //dictionnary
@@ -190,4 +194,17 @@ Jeff.bilan()
 // Surtout elle permet a une classe A et B d'échanger des informations entre eux dans un sens unique. En fonction de ce que renvoie B, la classe A prend des actions
 
 // En pratique, les UIViews, demandent à la classe de compiler les informations pour savoir comment ils doivent réagir
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// udebug
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+var datamotion : [String:[Double]] = ["x":[0,1,2,3],"y":[0,1,2,3],"z":[0,1,2,3]]
+
+var eeee = datamotion["x"]!
+var y=eeee[(eeee.count-2)...(eeee.count-1)]
+print(y[2])
 
