@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         chartDataSet[0].fillColor = UIColor.red.withAlphaComponent(0.2)
         chartDataSet[1].fillColor = UIColor.blue.withAlphaComponent(0.2)
 
-        
+
 
         /*
         set1.axisDependency = .Left // Line will correlate with left axis values
@@ -93,7 +93,14 @@ class ViewController: UIViewController {
         
         let chartData = LineChartData(dataSets: chartDataSet)
      
-        
+        lineView.leftAxis.drawGridLinesEnabled = false
+        lineView.rightAxis.drawGridLinesEnabled = false
+        lineView.rightAxis.enabled=false
+        lineView.xAxis.drawGridLinesEnabled = false
+        lineView.xAxis.labelPosition = XAxis.LabelPosition.bottom
+        lineView.chartDescription?.text = ""
+
+
         lineView.data = chartData
     }
     

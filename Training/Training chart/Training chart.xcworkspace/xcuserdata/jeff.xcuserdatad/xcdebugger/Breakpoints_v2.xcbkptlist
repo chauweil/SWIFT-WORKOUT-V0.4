@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Training chart/ViewController.swift"
-            timestampString = "524676211.892006"
+            timestampString = "524677758.519157"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "updateChartWithData2()"
             landmarkType = "7">
          </BreakpointContent>
