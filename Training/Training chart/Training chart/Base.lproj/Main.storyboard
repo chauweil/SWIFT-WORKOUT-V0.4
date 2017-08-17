@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,18 +22,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bgu-rT-dZQ" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="74" y="129" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIr-SD-VzQ" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="192" width="343" height="412"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="09Q-Wc-hbr"/>
+                                    <constraint firstAttribute="height" constant="412" id="DXx-va-2II"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIr-SD-VzQ" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="135" y="438" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m3J-bV-liC">
+                                <rect key="frame" x="67" y="20" width="240" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgu-rT-dZQ" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="Ike-bX-1hJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Bgu-rT-dZQ" firstAttribute="leading" secondItem="m3J-bV-liC" secondAttribute="leading" id="UhN-ch-1gr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bgu-rT-dZQ" secondAttribute="trailing" id="ar9-Et-dyx"/>
+                                    <constraint firstItem="Bgu-rT-dZQ" firstAttribute="top" secondItem="m3J-bV-liC" secondAttribute="top" id="sAT-Kc-JOA"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="m3J-bV-liC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="7gL-4Y-uX0"/>
+                            <constraint firstItem="ZIr-SD-VzQ" firstAttribute="top" secondItem="m3J-bV-liC" secondAttribute="bottom" constant="44" id="EIQ-bp-ja1"/>
+                            <constraint firstItem="ZIr-SD-VzQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EMs-GM-yv4"/>
+                            <constraint firstItem="m3J-bV-liC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EbW-gk-76I"/>
+                            <constraint firstItem="ZIr-SD-VzQ" firstAttribute="centerX" secondItem="Bgu-rT-dZQ" secondAttribute="centerX" id="LJq-Ab-9JK"/>
+                            <constraint firstItem="m3J-bV-liC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rkh-8h-tqZ"/>
+                            <constraint firstItem="ZIr-SD-VzQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Tfn-ZH-weT"/>
+                            <constraint firstItem="m3J-bV-liC" firstAttribute="centerX" secondItem="ZIr-SD-VzQ" secondAttribute="centerX" id="x0U-RS-gu5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="barView" destination="Bgu-rT-dZQ" id="tFj-Ya-F2q"/>
@@ -41,6 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

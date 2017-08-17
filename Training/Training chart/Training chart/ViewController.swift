@@ -30,14 +30,13 @@ class ViewController: UIViewController {
 
         }
         
-        Timer.scheduledTimer(timeInterval: 1/10, target: self, selector: #selector(updateChartWithData2), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateChartWithData2), userInfo: nil, repeats: true)
         updateChartWithData()
         //startUpdateChart()
         //updateChartWithData2()
     }
     
     func startUpdateChart(){
-        print(data)
         data.remove(at: 0)
         data.append(Double(arc4random_uniform(14) + 1))
         data2.remove(at: 0)
@@ -66,7 +65,34 @@ class ViewController: UIViewController {
         chartDataSet[0].drawCirclesEnabled = false
         chartDataSet[1].drawCirclesEnabled = false
 
+        chartDataSet[0].axisDependency = .left
+        chartDataSet[0].setColor(UIColor.red.withAlphaComponent(0.5)) // our line's opacity is 50%
+
+        chartDataSet[1].axisDependency = .left
+        chartDataSet[1].setColor(UIColor.blue.withAlphaComponent(0.5)) // our line's opacity is 50%
+        
+        chartDataSet[0].drawFilledEnabled = true
+        chartDataSet[1].drawFilledEnabled = true
+        
+        chartDataSet[0].fillColor = UIColor.red.withAlphaComponent(0.2)
+        chartDataSet[1].fillColor = UIColor.blue.withAlphaComponent(0.2)
+
+        
+
+        /*
+        set1.axisDependency = .Left // Line will correlate with left axis values
+         set1.setColor(UIColor.redColor().colorWithAlphaComponent(0.5)) // our line's opacity is 50%
+        set1.setCircleColor(UIColor.redColor()) // our circle will be dark red
+        set1.lineWidth = 2.0
+        set1.circleRadius = 6.0 // the radius of the node circle
+        set1.fillAlpha = 65 / 255.0
+        set1.fillColor = UIColor.redColor()
+        set1.highlightColor = UIColor.whiteColor()
+        set1.drawCircleHoleEnabled = true
+    */
+        
         let chartData = LineChartData(dataSets: chartDataSet)
+     
         
         lineView.data = chartData
     }
