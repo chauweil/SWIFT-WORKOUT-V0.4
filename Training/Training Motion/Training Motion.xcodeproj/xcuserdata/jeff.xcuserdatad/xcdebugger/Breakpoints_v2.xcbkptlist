@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Training Motion/ViewController.swift"
-            timestampString = "524691973.779578"
+            timestampString = "524693444.896443"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "SendData()"
             landmarkType = "7">
          </BreakpointContent>

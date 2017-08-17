@@ -137,6 +137,10 @@ class ViewController: UIViewController {
         chartDataSet[1].drawFilledEnabled = true
         chartDataSet[2].drawFilledEnabled = true
 
+        chartDataSet[0].drawValuesEnabled = false
+        chartDataSet[1].drawValuesEnabled = false
+        chartDataSet[2].drawValuesEnabled = false
+            
         chartDataSet[0].fillColor = UIColor.red.withAlphaComponent(0.2)
         chartDataSet[1].fillColor = UIColor.blue.withAlphaComponent(0.2)
         chartDataSet[2].fillColor = UIColor.green.withAlphaComponent(0.2)
@@ -152,10 +156,15 @@ class ViewController: UIViewController {
         lineView.xAxis.drawGridLinesEnabled = false
         lineView.xAxis.labelPosition = XAxis.LabelPosition.bottom
         lineView.chartDescription?.text = ""
-        
-        
-        
+        lineView.drawMarkers = false
         lineView.data = chartData
+            
+        lineView.leftAxis.axisMinimum = min(-2,lineView.data!.yMin)
+        lineView.leftAxis.axisMaximum = max(2,lineView.data!.yMax )
+        lineView.leftAxis.labelCount = Int(max(2,lineView.data!.yMax )-min(-2,lineView.data!.yMin))
+            
+         lineView.backgroundColor = UIColor(white: 1, alpha: 0)
+            
         
         lineView.leftAxis.valueFormatter=DefaultAxisValueFormatter(block: {(value, _) in
             return String(Int(value)) + " G"
