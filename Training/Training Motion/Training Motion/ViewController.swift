@@ -20,11 +20,14 @@ class ViewController: UIViewController {
     let CM = CMMotionManager()
     var timer : Timer?
     var user = String()
-    var datamotion : [String:[Double]] = ["x":[],"y":[],"z":[]]
-    var datarotate : [String:[Double]] = ["x":[],"y":[],"z":[]]
-
+    var datamotion : [String:[Double]] = ["x":[0],"y":[0],"z":[0]]
+    var datarotate : [String:[Double]] = ["x":[0],"y":[0],"z":[0]]
     var dataplot : [String:[Double]] = ["x":[],"y":[],"z":[]]
 
+    @IBOutlet weak var textZ: UILabel!
+    @IBOutlet weak var textY: UILabel!
+    @IBOutlet weak var textX: UILabel!
+    
     /// ---------------------------------------- Outlet  -------------------------------
     @IBOutlet weak var lineView: LineChartView!
     @IBOutlet weak var lineView2: LineChartView!
@@ -33,6 +36,7 @@ class ViewController: UIViewController {
     /// ---------------------------------------- Override superclass methods  -------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
+
         CM.accelerometerUpdateInterval=1/10
         CM.deviceMotionUpdateInterval=1/10
 
@@ -74,19 +78,26 @@ class ViewController: UIViewController {
                 }
             }
 
-            
-            CM.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
+       //     CM.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xTrueNorthZVertical,to: OperationQueue.current!,
+                 CM.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xMagneticNorthZVertical,to: OperationQueue.current!,withHandler: { (data, error) in
                 if let mydata = data
                 {
                     let x = mydata.attitude.roll*180/3.1415
                     let y =  mydata.attitude.pitch*180/3.1415
                     let z =  mydata.attitude.yaw*180/3.1415
                     
+                    
                     self.datarotate["x"]!.append(x)
                     self.datarotate["y"]!.append(y)
                     self.datarotate["z"]!.append(z)
                     
                     self.updateChartWithDataRotate()
+                    
+                    self.textX.text=String(Int(x))+" °"
+                    self.textY.text=String(Int(y))+" °"
+                    self.textZ.text=String(Int(z))+" °"
+
+                    
                 }
                 
                 
