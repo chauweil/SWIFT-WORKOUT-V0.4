@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     /// ---------------------------------------- Override superclass methods  -------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        CM.accelerometerUpdateInterval=1/20
+        CM.accelerometerUpdateInterval=1/10
         CM.deviceMotionUpdateInterval=1/10
 
         userText.text!=user
@@ -78,9 +78,9 @@ class ViewController: UIViewController {
             CM.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
                 if let mydata = data
                 {
-                    let x = mydata.attitude.roll
-                    let y =  mydata.attitude.pitch
-                    let z =  mydata.attitude.yaw
+                    let x = mydata.attitude.roll*180/3.1415
+                    let y =  mydata.attitude.pitch*180/3.1415
+                    let z =  mydata.attitude.yaw*180/3.1415
                     
                     self.datarotate["x"]!.append(x)
                     self.datarotate["y"]!.append(y)
@@ -290,9 +290,9 @@ class ViewController: UIViewController {
             lineView2.drawMarkers = false
             lineView2.data = chartData
             
-        //    lineView2.leftAxis.axisMinimum = min(-2,lineView.data!.yMin)
-        //    lineView2.leftAxis.axisMaximum = max(2,lineView.data!.yMax )
-         //   lineView2.leftAxis.labelCount = Int(max(2,lineView.data!.yMax )-min(-2,lineView.data!.yMin))
+            lineView2.leftAxis.axisMinimum = min(-180,lineView.data!.yMin)
+            lineView2.leftAxis.axisMaximum = max(180,lineView.data!.yMax )
+           lineView2.leftAxis.labelCount = Int(max(2,lineView.data!.yMax )-min(-2,lineView.data!.yMin))
             
             lineView2.backgroundColor = UIColor(white: 1, alpha: 0)
             
