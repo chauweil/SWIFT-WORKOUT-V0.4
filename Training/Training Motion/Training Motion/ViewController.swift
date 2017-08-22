@@ -37,8 +37,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        CM.accelerometerUpdateInterval=1/10
-        CM.deviceMotionUpdateInterval=1/10
+        CM.deviceMotionUpdateInterval=1/20
 
         userText.text!=user
 
@@ -59,29 +58,22 @@ class ViewController: UIViewController {
         if(sender.title(for: .normal)! == "Start tracking"){
             sender.setTitle("Stop tracking", for: .normal)
            // datamotion  = ["x":[0],"y":[0],"z":[0],"user":[user]]
-            CM.startAccelerometerUpdates(to: OperationQueue.current! ){ (data, error) in
+
+            
+        CM.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xMagneticNorthZVertical,to: OperationQueue.current!,withHandler: { (data, error) in
                 if let mydata = data
                 {
-                    let x = mydata.acceleration.x
-                    let y = mydata.acceleration.y
-                    let z = mydata.acceleration.z
                     
-                    self.datamotion["x"]!.append(x)
-                    self.datamotion["y"]!.append(y)
-                    self.datamotion["z"]!.append(z)
+                    let x1 = mydata.userAcceleration.x
+                    let y1 = mydata.userAcceleration.y
+                    let z1 = mydata.userAcceleration.z
+                    
+                    self.datamotion["x"]!.append(x1)
+                    self.datamotion["y"]!.append(y1)
+                    self.datamotion["z"]!.append(z1)
                     
                     
                     
-                    self.updateChartWithData()
-                    self.updateChartWithDataRotate()
-
-                }
-            }
-
-       //     CM.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xTrueNorthZVertical,to: OperationQueue.current!,
-                 CM.startDeviceMotionUpdates(using: CMAttitudeReferenceFrame.xMagneticNorthZVertical,to: OperationQueue.current!,withHandler: { (data, error) in
-                if let mydata = data
-                {
                     let x = mydata.attitude.roll*180/3.1415
                     let y =  mydata.attitude.pitch*180/3.1415
                     let z =  mydata.attitude.yaw*180/3.1415
@@ -91,6 +83,7 @@ class ViewController: UIViewController {
                     self.datarotate["y"]!.append(y)
                     self.datarotate["z"]!.append(z)
                     
+                    self.updateChartWithData()
                     self.updateChartWithDataRotate()
                     
                     self.textX.text=String(Int(x))+" °"
