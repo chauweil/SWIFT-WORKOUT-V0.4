@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         CM.accelerometerUpdateInterval=1/20
-        CM.gyroUpdateInterval=1/20
+        CM.deviceMotionUpdateInterval=1/10
 
         userText.text!=user
 
@@ -66,17 +66,21 @@ class ViewController: UIViewController {
                     self.datamotion["y"]!.append(y)
                     self.datamotion["z"]!.append(z)
                     
+                    
+                    
                     self.updateChartWithData()
+                    self.updateChartWithDataRotate()
+
                 }
             }
 
-            CM.startGyroUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
-              
+            
+            CM.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
                 if let mydata = data
                 {
-                    let x = mydata.rotationRate.x
-                    let y = mydata.rotationRate.y
-                    let z = mydata.rotationRate.z
+                    let x = mydata.attitude.roll
+                    let y =  mydata.attitude.pitch
+                    let z =  mydata.attitude.yaw
                     
                     self.datarotate["x"]!.append(x)
                     self.datarotate["y"]!.append(y)
@@ -85,8 +89,9 @@ class ViewController: UIViewController {
                     self.updateChartWithDataRotate()
                 }
                 
-            
+                
             })
+
             
             
             
@@ -94,7 +99,7 @@ class ViewController: UIViewController {
         }else{
             sender.setTitle("Start tracking", for: .normal)
             CM.stopAccelerometerUpdates()
-            CM.stopGyroUpdates()
+            CM.stopDeviceMotionUpdates()
 
             SendData()
             //datamotion  = ["x":[0],"y":[0],"z":[0],"user":[user]]
@@ -247,7 +252,7 @@ class ViewController: UIViewController {
                 dataEntries3.append(dataEntry3)
             }
             
-            let chartDataSet = [LineChartDataSet(values: dataEntries, label: "X"),LineChartDataSet(values: dataEntries2, label: "Y"),LineChartDataSet(values: dataEntries3, label: "Z")]
+            let chartDataSet = [LineChartDataSet(values: dataEntries, label: "roll"),LineChartDataSet(values: dataEntries2, label: "pitch"),LineChartDataSet(values: dataEntries3, label: "yaw")]
             chartDataSet[0].drawCirclesEnabled = false
             chartDataSet[1].drawCirclesEnabled = false
             chartDataSet[2].drawCirclesEnabled = false
