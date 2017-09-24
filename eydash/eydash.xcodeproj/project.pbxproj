@@ -14,6 +14,7 @@
 		1F97D6171F6B18BA00DDE08A /* eydash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F97D6151F6B18BA00DDE08A /* eydash.xcdatamodeld */; };
 		1F97D6191F6B18BA00DDE08A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F97D6181F6B18BA00DDE08A /* Assets.xcassets */; };
 		1F97D61C1F6B18BA00DDE08A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F97D61A1F6B18BA00DDE08A /* LaunchScreen.storyboard */; };
+		DD25B8C9CD0B99034CDC0E70 /* Pods_eydash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECD7AC41C80F5B9B7577AB66 /* Pods_eydash.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		1F97D6181F6B18BA00DDE08A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F97D61B1F6B18BA00DDE08A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F97D61D1F6B18BA00DDE08A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		449D8C902977A383185DB2E0 /* Pods-eydash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eydash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eydash/Pods-eydash.debug.xcconfig"; sourceTree = "<group>"; };
+		459D79B009013BE298B9EA43 /* Pods-eydash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eydash.release.xcconfig"; path = "Pods/Target Support Files/Pods-eydash/Pods-eydash.release.xcconfig"; sourceTree = "<group>"; };
+		ECD7AC41C80F5B9B7577AB66 /* Pods_eydash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eydash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD25B8C9CD0B99034CDC0E70 /* Pods_eydash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				1F97D60D1F6B18BA00DDE08A /* eydash */,
 				1F97D60C1F6B18BA00DDE08A /* Products */,
+				79631EA723EA8679E0E28DA1 /* Pods */,
+				96CDEB40A477ADA99FE309B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,23 @@
 			path = eydash;
 			sourceTree = "<group>";
 		};
+		79631EA723EA8679E0E28DA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				449D8C902977A383185DB2E0 /* Pods-eydash.debug.xcconfig */,
+				459D79B009013BE298B9EA43 /* Pods-eydash.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		96CDEB40A477ADA99FE309B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECD7AC41C80F5B9B7577AB66 /* Pods_eydash.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F97D6201F6B18BA00DDE08A /* Build configuration list for PBXNativeTarget "eydash" */;
 			buildPhases = (
+				61F5CEF9A2B59FE32CD3A9C9 /* [CP] Check Pods Manifest.lock */,
 				1F97D6071F6B18BA00DDE08A /* Sources */,
 				1F97D6081F6B18BA00DDE08A /* Frameworks */,
 				1F97D6091F6B18BA00DDE08A /* Resources */,
+				AB7E9C443BF7A96180628A41 /* [CP] Embed Pods Frameworks */,
+				D1D2C9C26659AFEA18AE540E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +164,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61F5CEF9A2B59FE32CD3A9C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-eydash-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB7E9C443BF7A96180628A41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-eydash/Pods-eydash-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eydash/Pods-eydash-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D2C9C26659AFEA18AE540E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eydash/Pods-eydash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F97D6071F6B18BA00DDE08A /* Sources */ = {
@@ -269,6 +354,7 @@
 		};
 		1F97D6211F6B18BA00DDE08A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 449D8C902977A383185DB2E0 /* Pods-eydash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3RQLN7FWUC;
@@ -283,6 +369,7 @@
 		};
 		1F97D6221F6B18BA00DDE08A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459D79B009013BE298B9EA43 /* Pods-eydash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3RQLN7FWUC;
