@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eydash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_386466" translatesAutoresizingMaskIntoConstraints="NO" id="Zhx-CD-0Vd">
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bonjour Monsieur  Levy," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcz-se-jLW">
+                                <rect key="frame" x="0.0" y="608" width="1021" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1021" id="hUA-L6-jUc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="100"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwK-Wt-6ZT">
+                                <rect key="frame" x="0.0" y="736" width="1021" height="57"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="37"/>
+                                <state key="normal" title="Cliquez ici pour acceder au reporting financier">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zf5-Lk-hwy" kind="show" id="Puf-gy-CoQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Zhx-CD-0Vd" secondAttribute="trailing" id="0BT-vR-EFX"/>
+                            <constraint firstItem="Zhx-CD-0Vd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AE4-52-5m3"/>
+                            <constraint firstItem="Jcz-se-jLW" firstAttribute="leading" secondItem="Zhx-CD-0Vd" secondAttribute="leading" id="Lj5-h8-5c2"/>
+                            <constraint firstItem="Zhx-CD-0Vd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OJo-Re-ATP"/>
+                            <constraint firstItem="Jcz-se-jLW" firstAttribute="leading" secondItem="fwK-Wt-6ZT" secondAttribute="leading" id="b8H-do-5yj"/>
+                            <constraint firstItem="Jcz-se-jLW" firstAttribute="top" secondItem="Zhx-CD-0Vd" secondAttribute="bottom" constant="-416" id="d9W-lb-8xM"/>
+                            <constraint firstItem="fwK-Wt-6ZT" firstAttribute="width" secondItem="Jcz-se-jLW" secondAttribute="width" id="eVO-9o-1EP"/>
+                            <constraint firstItem="fwK-Wt-6ZT" firstAttribute="top" secondItem="Jcz-se-jLW" secondAttribute="bottom" constant="8" symbolic="YES" id="l3d-Sr-SyP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zhx-CD-0Vd" secondAttribute="bottom" id="nwD-GG-xrD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78.184480234260604" y="138.8671875"/>
+        </scene>
+        <!--View Controller home-->
+        <scene sceneID="K52-Wg-kr8">
+            <objects>
+                <viewController id="Zf5-Lk-hwy" customClass="ViewController_home" customModule="eydash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p3u-7u-BUZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="sm5-j5-obH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vdY-KU-X9i" customClass="viewcontroller_home">
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2l9-eT-2TS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640" y="192"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_386466" width="2560" height="1600"/>
+    </resources>
+</document>
