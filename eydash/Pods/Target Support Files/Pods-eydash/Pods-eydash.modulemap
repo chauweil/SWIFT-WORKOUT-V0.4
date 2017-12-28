@@ -1,6 +1,0 @@
-framework module Pods_eydash {
-  umbrella header "Pods-eydash-umbrella.h"
-
-  export *
-  module * { export * }
-}
