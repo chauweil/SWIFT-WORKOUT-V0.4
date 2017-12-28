@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F10031F1F6EE9D1003C5E58 /* ViewController_home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F10031E1F6EE9D1003C5E58 /* ViewController_home.swift */; };
+		1F8C7B8F1F78A16700069A89 /* ViewControllerGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8C7B8E1F78A16600069A89 /* ViewControllerGeneral.swift */; };
 		1F97D60F1F6B18BA00DDE08A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97D60E1F6B18BA00DDE08A /* AppDelegate.swift */; };
 		1F97D6111F6B18BA00DDE08A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F97D6101F6B18BA00DDE08A /* ViewController.swift */; };
 		1F97D6141F6B18BA00DDE08A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F97D6121F6B18BA00DDE08A /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		1F10031E1F6EE9D1003C5E58 /* ViewController_home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_home.swift; sourceTree = "<group>"; };
+		1F8C7B8E1F78A16600069A89 /* ViewControllerGeneral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerGeneral.swift; sourceTree = "<group>"; };
 		1F97D60B1F6B18BA00DDE08A /* eydash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eydash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F97D60E1F6B18BA00DDE08A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F97D6101F6B18BA00DDE08A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				1F97D60E1F6B18BA00DDE08A /* AppDelegate.swift */,
 				1F97D6101F6B18BA00DDE08A /* ViewController.swift */,
+				1F8C7B8E1F78A16600069A89 /* ViewControllerGeneral.swift */,
 				1F97D6121F6B18BA00DDE08A /* Main.storyboard */,
 				1F97D6181F6B18BA00DDE08A /* Assets.xcassets */,
 				1F97D61A1F6B18BA00DDE08A /* LaunchScreen.storyboard */,
@@ -232,6 +235,7 @@
 				1F97D6171F6B18BA00DDE08A /* eydash.xcdatamodeld in Sources */,
 				1F97D60F1F6B18BA00DDE08A /* AppDelegate.swift in Sources */,
 				1F10031F1F6EE9D1003C5E58 /* ViewController_home.swift in Sources */,
+				1F8C7B8F1F78A16700069A89 /* ViewControllerGeneral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
