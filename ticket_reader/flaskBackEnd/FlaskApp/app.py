@@ -39,6 +39,7 @@ def get_name():
 def get_q():
     content = request.json
     print(content)
+    return "OK",200
 
 
 if __name__ == '__main__':
