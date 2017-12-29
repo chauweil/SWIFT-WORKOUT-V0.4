@@ -61,5 +61,6 @@ func getAPI() {
                 task.resume()
 }
 ```
-
+###### La documentation officielle sur les requêtes http 
+https://developer.apple.com/documentation/foundation/url_loading_system/fetching_website_data_into_memory
 

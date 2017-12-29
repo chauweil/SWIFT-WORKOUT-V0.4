@@ -22,45 +22,60 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="n1k-w8-Q7Z"/>
+                                    <constraint firstAttribute="height" constant="43" id="lb9-gX-QQf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-cZ-5yb">
-                                <rect key="frame" x="104" y="264.5" width="113" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
-                                <state key="normal" title="Scan receipt"/>
-                                <connections>
-                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nSu-Hx-JBA"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-DK-spo">
-                                <rect key="frame" x="0.0" y="338" width="320" height="230"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK1-gB-PNY">
+                                <rect key="frame" x="0.0" y="480" width="320" height="88"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="Fba-Rl-eCV"/>
+                                    <constraint firstAttribute="height" constant="88" id="y41-G5-8H0"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-DK-spo">
+                                <rect key="frame" x="0.0" y="43" width="320" height="436"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atr-LB-9VH">
-                                <rect key="frame" x="61" y="105" width="176" height="30"/>
+                                <rect key="frame" x="72" y="512" width="176" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="get data"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                <state key="normal" title="get list picture">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="getdata:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIm-kF-Fb6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmL-cZ-5yb">
+                                <rect key="frame" x="104" y="478" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                <state key="normal" title="Scan receipt">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nSu-Hx-JBA"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HKz-DK-spo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Id-3O-J5j"/>
-                            <constraint firstItem="a7m-oq-uOn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FYc-q8-Ykq"/>
-                            <constraint firstItem="HKz-DK-spo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V4s-aZ-6Aa"/>
-                            <constraint firstItem="RmL-cZ-5yb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bjh-KE-uyd"/>
-                            <constraint firstItem="RmL-cZ-5yb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bmn-Xb-4ts"/>
-                            <constraint firstItem="HKz-DK-spo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="q6T-w0-eZN"/>
-                            <constraint firstItem="a7m-oq-uOn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="whJ-XC-7Ux"/>
-                            <constraint firstItem="a7m-oq-uOn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zlq-1u-3te"/>
+                            <constraint firstItem="a7m-oq-uOn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="01Q-KF-cIl"/>
+                            <constraint firstItem="HKz-DK-spo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="05o-6s-1FQ"/>
+                            <constraint firstItem="HKz-DK-spo" firstAttribute="top" secondItem="a7m-oq-uOn" secondAttribute="bottom" id="Ajq-yY-7Fx"/>
+                            <constraint firstItem="CK1-gB-PNY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="AtN-OI-kit"/>
+                            <constraint firstItem="HKz-DK-spo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EaH-pQ-7xK"/>
+                            <constraint firstItem="CK1-gB-PNY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dyp-28-WBh"/>
+                            <constraint firstItem="a7m-oq-uOn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hzd-Fz-ozt"/>
+                            <constraint firstItem="CK1-gB-PNY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="inx-lf-Rbv"/>
+                            <constraint firstItem="CK1-gB-PNY" firstAttribute="top" secondItem="HKz-DK-spo" secondAttribute="bottom" constant="1" id="kBn-Ek-m1W"/>
+                            <constraint firstItem="a7m-oq-uOn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yIZ-3T-ksc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -70,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="133.09859154929578"/>
+            <point key="canvasLocation" x="132" y="132.26600985221674"/>
         </scene>
     </scenes>
 </document>

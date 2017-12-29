@@ -14,8 +14,20 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     @IBOutlet weak var imageTake: UIImageView!
     var imagePicker: UIImagePickerController!
 
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
     @IBAction func getdata(_ sender: Any) {
+        
+        activityIndicator.center=self.view.center
+        activityIndicator.hidesWhenStopped=true
+        activityIndicator.activityIndicatorViewStyle=UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
         getAPI()
+
+
+        
     }
     
     override func viewDidLoad() {
@@ -25,10 +37,13 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     }
 
     func getAPI() {
+        
+        // set the url to be queried
         let url = URL(string: "http://vps447991.ovh.net:5000/im")
         var request = URLRequest(url: url!)
         request.httpMethod = "GET"
-
+        
+        // Foundation > URL loading system > URLSession 
         let task=URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error != nil
             {print("error")}
@@ -42,6 +57,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
                         let dataDecoded : Data = Data(base64Encoded: ee, options: .ignoreUnknownCharacters)!
                         let decodedimage = UIImage(data: dataDecoded)
                         self.imageTake.image  = decodedimage
+                        self.activityIndicator.stopAnimating()
+                        UIApplication.shared.endIgnoringInteractionEvents()
                         
                     }
                     catch{print("bug")}
@@ -51,6 +68,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
             }
         }
         task.resume()
+        print("done")
+  
     }
     
 
