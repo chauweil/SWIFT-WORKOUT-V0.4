@@ -14,10 +14,14 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     @IBOutlet weak var imageTake: UIImageView!
     var imagePicker: UIImagePickerController!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        if let decodedData = Data(base64Encoded: mediaFile, options: .ignoreUnknownCharacters) {
+            let image = UIImage(data: decodedData)
+            imageTake.image=image
+        }
     }
 
     override func didReceiveMemoryWarning() {
