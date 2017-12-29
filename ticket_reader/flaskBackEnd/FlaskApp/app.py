@@ -1,7 +1,8 @@
 from flask import Flask, jsonify, abort, request, make_response, url_for, render_template, send_file,Response
 from PIL import Image
 import base64
-
+import pickle
+import datetime
 
 import json
 
@@ -34,11 +35,20 @@ def get_name():
         resp = Response(js, status=200, mimetype='application/json')
         return resp
 
+# in command line
+#curl -H "Content-Type: application/json" -X POST -d '{"urname":"xyz","password":"xyz"}' http://localhost:5000/q
+@app.route('/q',methods=["POST"])
+def get_image():
+    content = request.json
+    now = str(datetime.datetime.now())
+    pickle.dump(content['image'],open( now+"_image.p", "wb" ))
+    return "OK",200
 
-@app.route('/q')
+@app.route('/r', methods=["POST"])
 def get_q():
     content = request.json
-    print(content)
+    print(content['username'])
+    pickle.dump(content['username'], open( now+"username.p", "wb"))
     return "OK",200
 
 
