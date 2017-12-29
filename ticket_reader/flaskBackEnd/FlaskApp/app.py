@@ -22,17 +22,23 @@ def home():
       return "welcome"
 
 
-@app.route('/<user>')
-def get_tasks(user):
-    if user=='im':
+@app.route('/im')
+def get_im():
         js = json.dumps(encoded_string.decode('utf-8'))
         resp = Response(js, status=200, mimetype='application/json')
         return resp
-    else:
+
+@app.route('/name')
+def get_name():
         js = json.dumps(db)
         resp = Response(js, status=200, mimetype='application/json')
         return resp
 
+
+@app.route('/q')
+def get_q():
+    content = request.json
+    print(content)
 
 
 if __name__ == '__main__':
