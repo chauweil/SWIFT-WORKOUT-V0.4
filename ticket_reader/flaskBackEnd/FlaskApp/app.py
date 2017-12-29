@@ -3,6 +3,8 @@ from PIL import Image
 import base64
 import pickle
 import datetime
+import logging
+from logging.handlers import RotatingFileHandler
 
 import json
 
@@ -39,9 +41,10 @@ def get_name():
 #curl -H "Content-Type: application/json" -X POST -d '{"urname":"xyz","password":"xyz"}' http://localhost:5000/q
 @app.route('/q',methods=["POST"])
 def get_image():
-    content = request.json
+    content = request.data
+    app.logger.info(content)
     now = str(datetime.datetime.now())
-    pickle.dump(content['image'],open( now+"_image.p", "wb" ))
+    pickle.dump(content,open( now+"_image.p", "wb" ))
     return "OK",200
 
 @app.route('/r', methods=["POST"])

@@ -24,7 +24,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         UIApplication.shared.beginIgnoringInteractionEvents()
-        getAPI()
+        //getAPI()
+        sentAPI()
 
 
         
@@ -91,6 +92,10 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
                        let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
                         let json=["image":strBase64]
                         request.httpBody = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) //
+                        
+                        self.activityIndicator.stopAnimating()
+                        UIApplication.shared.endIgnoringInteractionEvents()
+                        
                     }
                     catch{print("bug")}
                     
