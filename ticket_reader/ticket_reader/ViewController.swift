@@ -14,16 +14,47 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     @IBOutlet weak var imageTake: UIImageView!
     var imagePicker: UIImagePickerController!
 
+    @IBAction func getdata(_ sender: Any) {
+        getAPI()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if let decodedData = Data(base64Encoded: mediaFile, options: .ignoreUnknownCharacters) {
-            let image = UIImage(data: decodedData)
-            imageTake.image=image
-        }
+
     }
 
+    func getAPI() {
+        let url = URL(string: "http://vps447991.ovh.net:5000/im")
+        var request = URLRequest(url: url!)
+        request.httpMethod = "GET"
+
+        let task=URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if error != nil
+            {print("error")}
+            else{
+                if let content = data {
+                    do {
+                        let myjson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject!
+                        
+                        let serie = myjson as! NSDictionary
+                        let ee:String = serie.value(forKey:"im") as! String
+                        let dataDecoded : Data = Data(base64Encoded: ee, options: .ignoreUnknownCharacters)!
+                        let decodedimage = UIImage(data: dataDecoded)
+                        self.imageTake.image  = decodedimage
+                        
+                    }
+                    catch{print("bug")}
+                    
+                }
+                
+            }
+        }
+        task.resume()
+    }
+    
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
