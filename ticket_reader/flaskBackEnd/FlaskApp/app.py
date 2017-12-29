@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, abort, request, make_response, url_for, render_template, send_file
+from flask import Flask, jsonify, abort, request, make_response, url_for, render_template, send_file,Response
 from PIL import Image
 import base64
 
@@ -24,7 +24,14 @@ def home():
 
 @app.route('/<user>')
 def get_tasks(user):
-      return jsonify(encoded_string.decode('utf-8')),200
+    if user=='im':
+        js = json.dumps(encoded_string.decode('utf-8'))
+        resp = Response(js, status=200, mimetype='application/json')
+        return resp
+    else:
+        js = json.dumps(db)
+        resp = Response(js, status=200, mimetype='application/json')
+        return resp
 
 
 
