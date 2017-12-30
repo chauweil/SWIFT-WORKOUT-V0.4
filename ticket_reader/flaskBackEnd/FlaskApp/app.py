@@ -47,7 +47,7 @@ def get_name():
 #curl -H "Content-Type: application/json" -X POST -d '{"urname":"xyz","password":"xyz"}' http://localhost:5000/q
 @app.route('/q',methods=["POST"])
 def get_image():
-    content = request.data
+    content = request.files
     app.logger.info(content)
     now = str(datetime.datetime.now())
     pickle.dump(content,open( now+"_image.p", "wb" ))

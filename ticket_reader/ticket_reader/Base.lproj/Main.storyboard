@@ -42,10 +42,10 @@
                                 <rect key="frame" x="0.0" y="43" width="320" height="436"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atr-LB-9VH">
-                                <rect key="frame" x="72" y="512" width="176" height="30"/>
+                                <rect key="frame" x="-11" y="505" width="176" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
-                                <state key="normal" title="get list picture">
+                                <state key="normal" title="get last picture">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -61,6 +61,18 @@
                                 </state>
                                 <connections>
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nSu-Hx-JBA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxR-9P-wqz">
+                                <rect key="frame" x="159" y="505" width="176" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                <state key="normal" title="send  picture">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getdata:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEA-kW-LgX"/>
+                                    <action selector="sendData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NEd-DM-jP0"/>
                                 </connections>
                             </button>
                         </subviews>

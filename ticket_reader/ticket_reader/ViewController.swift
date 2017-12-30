@@ -12,11 +12,31 @@ import Alamofire
 import AlamofireImage
 
 class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
+    
+// ------------------------------------ Constructor ---------------------------------------------------
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+// ------------------------------------  Attributes  ---------------------------------------------------
     @IBOutlet weak var imageTake: UIImageView!
     var imagePicker: UIImagePickerController!
 
     var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    
+// ------------------------------------  Actions  ---------------------------------------------------
+
     
     @IBAction func getdata(_ sender: Any) {
         
@@ -33,81 +53,19 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func sendData(_ sender: Any) {
+        activityIndicator.center=self.view.center
+        activityIndicator.hidesWhenStopped=true
+        activityIndicator.activityIndicatorViewStyle=UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        //getAPI()
+        sentImage()
 
     }
 
-    func getAPI() {
-        
-        // set the url to be queried
-        let url = URL(string: "http://vps447991.ovh.net:5000/im")
-        var request = URLRequest(url: url!)
-        request.httpMethod = "GET"
-        
-        // Foundation > URL loading system > URLSession 
-        let task=URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if error != nil
-            {print("error")}
-            else{
-                if let content = data {
-                    do {
-                        let myjson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject!
-                        
-                        let serie = myjson as! NSDictionary
-                        let ee:String = serie.value(forKey:"im") as! String
-                        let dataDecoded : Data = Data(base64Encoded: ee, options: .ignoreUnknownCharacters)!
-                        let decodedimage = UIImage(data: dataDecoded)
-                        self.imageTake.image  = decodedimage
-                        self.activityIndicator.stopAnimating()
-                        UIApplication.shared.endIgnoringInteractionEvents()
-                        
-                    }
-                    catch{print("bug")}
-                    
-                }
-                
-            }
-        }
-        task.resume()
-        print("done")
-  
-    }
-    
-    func getImage() {
-        
-        
-        Alamofire.request("http://vps447991.ovh.net:5000/image").responseImage { response in
-            if let image = response.result.value {
-                print("image downloaded: \(image)")
-                self.imageTake.image  = image
 
-                
-                
-            }
-            self.activityIndicator.stopAnimating()
-            UIApplication.shared.endIgnoringInteractionEvents()
-            
-        }
-        
-        /*
-        Alamofire.download("https://httpbin.org/image/png").responseData { response in
-            if let data = response.result.value {
-                let image = UIImage(data: data)
-            }
-        }*/
-        
- 
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     @IBAction func takePhoto(_ sender: UIButton) {
         imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
@@ -116,6 +74,52 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         
     }
     
+    
+// ------------------------------------  Functions  ---------------------------------------------------
+    
+
+    func getImage() {
+                
+        Alamofire.request("http://vps447991.ovh.net:5000/image").responseImage { response in
+            if let image = response.result.value {
+                print("image downloaded: \(image)")
+                self.imageTake.image  = image
+            }
+            self.activityIndicator.stopAnimating()
+            UIApplication.shared.endIgnoringInteractionEvents()
+            
+        }
+    }
+
+    func sentImage() {
+        
+        let image = UIImage.init(named: "download")
+        let imgData = UIImageJPEGRepresentation(image!, 0.7)!
+        
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpeg")
+        },
+                         to:"http://vps447991.ovh.net:5000/q")
+        { (result) in
+            switch result {
+            case .success(let upload, _, _):
+                
+                upload.uploadProgress(closure: { (progress) in
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                })
+                
+                upload.responseJSON { response in
+                    print(response.result.value)
+                }
+                
+            case .failure(let encodingError):
+                print(encodingError)
+            }
+    }
+        
+    }
+ 
+ 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
         imageTake.image = info[UIImagePickerControllerOriginalImage] as? UIImage
@@ -177,6 +181,47 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
          task.resume()
          print("endtask")
     }
+     
+     
+     
+     
+     
+     func getAPI() {
+     
+     // set the url to be queried
+     let url = URL(string: "http://vps447991.ovh.net:5000/im")
+     var request = URLRequest(url: url!)
+     request.httpMethod = "GET"
+     
+     // Foundation > URL loading system > URLSession
+     let task=URLSession.shared.dataTask(with: request) { (data, response, error) in
+     if error != nil
+     {print("error")}
+     else{
+     if let content = data {
+     do {
+     let myjson = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject!
+     
+     let serie = myjson as! NSDictionary
+     let ee:String = serie.value(forKey:"im") as! String
+     let dataDecoded : Data = Data(base64Encoded: ee, options: .ignoreUnknownCharacters)!
+     let decodedimage = UIImage(data: dataDecoded)
+     self.imageTake.image  = decodedimage
+     self.activityIndicator.stopAnimating()
+     UIApplication.shared.endIgnoringInteractionEvents()
+     
+     }
+     catch{print("bug")}
+     
+     }
+     
+     }
+     }
+     task.resume()
+     print("done")
+     
+     }
+     
     */
 }
 
