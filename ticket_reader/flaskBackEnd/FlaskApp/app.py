@@ -64,7 +64,7 @@ def get_image():
     #image = Image.open(io.BytesIO(image_data))
     data2 = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
     im = img_as_ubyte(data2)
-    app.logger.info(im)
+    app.logger.info(type(im))
     pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
     return "OK",200
 
