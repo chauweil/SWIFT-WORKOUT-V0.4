@@ -5,6 +5,7 @@ import pickle
 import datetime
 import logging
 from logging.handlers import RotatingFileHandler
+from io import BytesIO
 
 import json
 
