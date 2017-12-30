@@ -52,7 +52,7 @@ def get_image():
     content["fileset"].save(open('im.p',"wb"))
     # app.logger.info(content["file.jpg"])
     now = str(datetime.datetime.now())
-    pickle.dump(content["fileset"],open( now+"_image.jpegn", "wb" ))
+    pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
     return "OK",200
 
 @app.route('/r', methods=["POST"])
