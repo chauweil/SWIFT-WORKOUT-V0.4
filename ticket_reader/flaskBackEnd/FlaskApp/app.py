@@ -24,6 +24,10 @@ encoded_string =  base64.b64encode(open("./static/images/BIG1.jpg", "rb").read()
 def home():
       return "welcome"
 
+@app.route('/image')
+def get_im2():
+        return send_file("./static/images/BIG1.jpg", mimetype='image/jpg')
+
 
 @app.route('/im')
 def get_im():

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreImage
+import Alamofire
 
 class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
 
@@ -25,7 +26,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         activityIndicator.startAnimating()
         UIApplication.shared.beginIgnoringInteractionEvents()
         //getAPI()
-        sentAPI()
+        getImage()
 
 
         
@@ -73,36 +74,28 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
   
     }
     
-    func sentAPI() {
+    func getImage() {
         
-        // set the url to be queried
-        print("1")
-        let url = URL(string: "http://vps447991.ovh.net:5000/q")
-        var request = URLRequest(url: url!)
-        request.httpMethod = "POST"
-        print("2")
-        let image    = UIImage(named: ("download"))
-        let imageData:NSData = UIImagePNGRepresentation(image!)! as NSData
-        print("3")
-        let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
-        print("4")
-        //let json = ["image":strBase64]
-        print("5")
-        request.httpBody =  strBase64.data(using: .utf8)
-  print(request.httpBody! )
-        // Foundation > URL loading system > URLSession
-        let task=URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if error != nil
-            {print("error")}
-            else{
-                self.activityIndicator.stopAnimating()
-                UIApplication.shared.endIgnoringInteractionEvents()
-                
-
+        print("in get image")
+        Alamofire.download("http://vps447991.ovh.net:5000/image").responseData { response in
+            if let data = response.result.value {
+                print(data)
+                let image = UIImage(data: data)
+                self.imageTake.image=image
             }
         }
-        task.resume()
-                  print("endtask")
+                print("end get image")
+        /*
+        Alamofire.download("https://httpbin.org/image/png").responseData { response in
+            if let data = response.result.value {
+                let image = UIImage(data: data)
+            }
+        }*/
+      
+        self.activityIndicator.stopAnimating()
+        UIApplication.shared.endIgnoringInteractionEvents()
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -147,5 +140,39 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     }*/
 
 
+    /*
+    func sentAPI() {
+        
+
+         set the url to be queried
+         print("1")
+         let url = URL(string: "http://vps447991.ovh.net:5000/q")
+         var request = URLRequest(url: url!)
+         request.httpMethod = "POST"
+         print("2")
+         let image    = UIImage(named: ("download"))
+         let imageData:NSData = UIImagePNGRepresentation(image!)! as NSData
+         print("3")
+         let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+         print("4")
+         //let json = ["image":strBase64]
+         print("5")
+         request.httpBody =  strBase64.data(using: .utf8)
+         print(request.httpBody! )
+         // Foundation > URL loading system > URLSession
+         let task=URLSession.shared.dataTask(with: request) { (data, response, error) in
+         if error != nil
+         {print("error")}
+         else{
+         self.activityIndicator.stopAnimating()
+         UIApplication.shared.endIgnoringInteractionEvents()
+         
+         
+         }
+         }
+         task.resume()
+         print("endtask")
+    }
+    */
 }
 
