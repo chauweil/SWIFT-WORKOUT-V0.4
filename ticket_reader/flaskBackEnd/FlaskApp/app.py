@@ -6,6 +6,7 @@ import datetime
 import logging
 from logging.handlers import RotatingFileHandler
 from io import BytesIO
+import numpy as np;
 
 import json
 
@@ -60,7 +61,8 @@ def get_image():
     in_memory_file = BytesIO()
     f.save(in_memory_file)
     #image = Image.open(io.BytesIO(image_data))
-    im = Image.open((in_memory_file))
+    data = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
+    im = Image.open(data)
     app.logger.info(im)
     pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
     return "OK",200
