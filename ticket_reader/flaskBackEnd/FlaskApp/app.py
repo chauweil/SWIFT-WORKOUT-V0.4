@@ -57,10 +57,10 @@ def get_image():
     pickle.dump(f,open( "f.jpeg", "wb" ))
     app.logger.info(content["fileset"])
 
-    in_memory_file = io.BytesIO()
+    in_memory_file = BytesIO()
     f.save(in_memory_file)
     #image = Image.open(io.BytesIO(image_data))
-    im = Image.open(io.BytesIO(in_memory_file))
+    im = Image.open(BytesIO(in_memory_file))
     app.logger.info(im)
     pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
     return "OK",200
