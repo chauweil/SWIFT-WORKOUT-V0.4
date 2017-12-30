@@ -16,7 +16,9 @@ app = Flask(__name__)
 # -------- db load
 db={ 'serie1': 23,'serie2': 22 ,'serie3': 23 ,'serie4': 18 ,'serie5': 23,'id':14 }
 im = Image.open("./static/images/BIG1.jpg")
-encoded_string =  base64.b64encode(open("./static/images/BIG1.jpg", "rb").read())
+#im2 = Image.open("./static/images/download.jpeg")
+
+#encoded_string =  base64.b64encode(open("./static/images/im2.jpeg", "rb").read())
 
 # -------- db load
 
@@ -26,7 +28,7 @@ def home():
 
 @app.route('/image')
 def get_im2():
-        return send_file("./static/images/BIG1.jpg", mimetype='image/jpeg')
+        return send_file("./static/images/download.jpeg", mimetype='image/jpeg')
 
 
 @app.route('/im')
