@@ -76,35 +76,33 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     func sentAPI() {
         
         // set the url to be queried
+        print("1")
         let url = URL(string: "http://vps447991.ovh.net:5000/q")
         var request = URLRequest(url: url!)
         request.httpMethod = "POST"
-        
+        print("2")
+        let image    = UIImage(named: ("download"))
+        let imageData:NSData = UIImagePNGRepresentation(image!)! as NSData
+        print("3")
+        let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+        print("4")
+        //let json = ["image":strBase64]
+        print("5")
+        request.httpBody =  strBase64.data(using: .utf8)
+  print(request.httpBody! )
         // Foundation > URL loading system > URLSession
         let task=URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error != nil
             {print("error")}
             else{
-                if let content = data {
-                    do {
-                       let image    = UIImage(named: ("IMG_3498"))
-                        let imageData:NSData = UIImagePNGRepresentation(image!)! as NSData
-                       let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
-                        let json=["image":strBase64]
-                        request.httpBody = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) //
-                        
-                        self.activityIndicator.stopAnimating()
-                        UIApplication.shared.endIgnoringInteractionEvents()
-                        
-                    }
-                    catch{print("bug")}
-                    
-                }
+                self.activityIndicator.stopAnimating()
+                UIApplication.shared.endIgnoringInteractionEvents()
                 
+
             }
         }
         task.resume()
-        
+                  print("endtask")
     }
     
     override func didReceiveMemoryWarning() {

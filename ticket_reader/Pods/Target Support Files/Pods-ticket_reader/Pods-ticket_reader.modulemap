@@ -1,0 +1,6 @@
+framework module Pods_ticket_reader {
+  umbrella header "Pods-ticket_reader-umbrella.h"
+
+  export *
+  module * { export * }
+}

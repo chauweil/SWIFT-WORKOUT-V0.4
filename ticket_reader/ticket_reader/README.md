@@ -1,6 +1,6 @@
 #  Receipt scanner & management
 
-### Installation
+### Configuration des droits dans la fiche produit Info.plist
 
 On peut utiliser la caméra et aux photos. Il faut l'ajouter dans Info.plist et 
 ```
@@ -17,6 +17,44 @@ Et cette commande pour les requêtes sans http
 <true/>
 </dict>
 ```
+### Installation de alamofire pour effectuer les requêtes API
+
+Créer un fichier Podfile: se placer dans le répertoire dans lequel se trouve le fichier .xcodeproj et faire en ligne de commande=
+
+```
+pod init
+```
+
+Ouvrir le fichier Podfile en tapant cette ligne de commande
+
+```
+open -a Xcode Podfile
+```
+Ajouter cette ligne dans le pod file
+```
+pod 'Alamofire', '~> 4.5'
+```
+Il devrait contenir ces lignes dorénavent :
+```
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ticket_reader' do
+# Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+use_frameworks!
+
+# Pods for ticket_reader
+pod 'Alamofire', '~> 4.5'
+end
+
+```
+Installer le tout en tapant cette ligne de commande
+
+```
+pod install
+
+```
+Il faut maintenaint ouvrir le fichier à travers le fichier ```.xcworkspace``` et plus le fichier ```.xcodeproj```.
 
 ### Documentation
 

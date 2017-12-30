@@ -13,6 +13,7 @@
 		1F9572211FEFA97E009720B9 /* ticket_reader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F95721F1FEFA97E009720B9 /* ticket_reader.xcdatamodeld */; };
 		1F9572231FEFA97E009720B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F9572221FEFA97E009720B9 /* Assets.xcassets */; };
 		1F9572261FEFA97E009720B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F9572241FEFA97E009720B9 /* LaunchScreen.storyboard */; };
+		53A153F5D075AB41548ABC5D /* Pods_ticket_reader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5862D389A2971BC725E195C7 /* Pods_ticket_reader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,9 @@
 		1F9572221FEFA97E009720B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F9572251FEFA97E009720B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F9572271FEFA97E009720B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5862D389A2971BC725E195C7 /* Pods_ticket_reader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ticket_reader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF783FADE49811E4B2DEF480 /* Pods-ticket_reader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticket_reader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ticket_reader/Pods-ticket_reader.debug.xcconfig"; sourceTree = "<group>"; };
+		E3FC03BF1C58D85ED24EC61A /* Pods-ticket_reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ticket_reader.release.xcconfig"; path = "Pods/Target Support Files/Pods-ticket_reader/Pods-ticket_reader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A153F5D075AB41548ABC5D /* Pods_ticket_reader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 			children = (
 				1F9572171FEFA97E009720B9 /* ticket_reader */,
 				1F9572161FEFA97E009720B9 /* Products */,
+				8CA062F99FBC6B86B52EB064 /* Pods */,
+				8E70418A9E0D089E8EFBA30E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +76,23 @@
 			path = ticket_reader;
 			sourceTree = "<group>";
 		};
+		8CA062F99FBC6B86B52EB064 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF783FADE49811E4B2DEF480 /* Pods-ticket_reader.debug.xcconfig */,
+				E3FC03BF1C58D85ED24EC61A /* Pods-ticket_reader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8E70418A9E0D089E8EFBA30E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5862D389A2971BC725E195C7 /* Pods_ticket_reader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F95722A1FEFA97E009720B9 /* Build configuration list for PBXNativeTarget "ticket_reader" */;
 			buildPhases = (
+				B00909B330D100D88F3C7EFC /* [CP] Check Pods Manifest.lock */,
 				1F9572111FEFA97E009720B9 /* Sources */,
 				1F9572121FEFA97E009720B9 /* Frameworks */,
 				1F9572131FEFA97E009720B9 /* Resources */,
+				524022E538218241DE16285D /* [CP] Embed Pods Frameworks */,
+				B5B304FE8464C4F4A7443EF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		524022E538218241DE16285D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ticket_reader/Pods-ticket_reader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ticket_reader/Pods-ticket_reader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B00909B330D100D88F3C7EFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ticket_reader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5B304FE8464C4F4A7443EF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ticket_reader/Pods-ticket_reader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F9572111FEFA97E009720B9 /* Sources */ = {
@@ -278,6 +359,7 @@
 		};
 		1F95722B1FEFA97E009720B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF783FADE49811E4B2DEF480 /* Pods-ticket_reader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -293,6 +375,7 @@
 		};
 		1F95722C1FEFA97E009720B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3FC03BF1C58D85ED24EC61A /* Pods-ticket_reader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
