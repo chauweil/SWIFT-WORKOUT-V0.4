@@ -48,9 +48,11 @@ def get_name():
 @app.route('/q',methods=["POST"])
 def get_image():
     content = request.files
-    app.logger.info(content)
+    app.logger.info(type(content["fileset"]))
+    content["fileset"].save(open('im.p',"wb"))
+    # app.logger.info(content["file.jpg"])
     now = str(datetime.datetime.now())
-    pickle.dump(content,open( now+"_image.p", "wb" ))
+    pickle.dump(content["fileset"],open( now+"_image.jpegn", "wb" ))
     return "OK",200
 
 @app.route('/r', methods=["POST"])

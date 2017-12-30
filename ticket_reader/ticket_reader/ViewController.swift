@@ -116,6 +116,11 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
                 print(encodingError)
             }
     }
+        self.activityIndicator.stopAnimating()
+        UIApplication.shared.endIgnoringInteractionEvents()
+        
+        
+        
         
     }
  
