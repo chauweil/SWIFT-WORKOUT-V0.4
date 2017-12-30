@@ -53,7 +53,7 @@ def get_image():
     content["fileset"].save(open('im.p',"wb"))
     # app.logger.info(content["file.jpg"])
     now = str(datetime.datetime.now())
-    f = content["fileset"].read()
+    f = content["fileset"]
     pickle.dump(f,open( "f.jpeg", "wb" ))
     app.logger.info(content["fileset"])
 
