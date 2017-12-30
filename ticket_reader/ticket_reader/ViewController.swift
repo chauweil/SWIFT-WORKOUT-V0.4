@@ -9,6 +9,7 @@
 import UIKit
 import CoreImage
 import Alamofire
+import AlamofireImage
 
 class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
 
@@ -77,13 +78,19 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     func getImage() {
         
         print("in get image")
-        Alamofire.download("http://vps447991.ovh.net:5000/image").responseData { response in
-            if let data = response.result.value {
-                print(data)
-                let image = UIImage(data: data)
-                self.imageTake.image=image
+
+        Alamofire.request("http://vps447991.ovh.net:5000/image").responseImage { response in
+            debugPrint(response)
+            
+            print(response.request)
+            print(response.response)
+            debugPrint(response.result)
+            
+            if let image = response.result.value {
+                print("image downloaded: \(image)")
             }
         }
+        
                 print("end get image")
         /*
         Alamofire.download("https://httpbin.org/image/png").responseData { response in
@@ -91,10 +98,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
                 let image = UIImage(data: data)
             }
         }*/
-      
-        self.activityIndicator.stopAnimating()
-        UIApplication.shared.endIgnoringInteractionEvents()
-        
+ 
         
     }
     

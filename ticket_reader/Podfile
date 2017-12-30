@@ -7,4 +7,6 @@ target 'ticket_reader' do
 
   # Pods for ticket_reader
  pod 'Alamofire', '~> 4.5'
+ pod 'AlamofireImage', '~> 3.3'
+
 end

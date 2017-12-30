@@ -26,7 +26,7 @@ def home():
 
 @app.route('/image')
 def get_im2():
-        return send_file("./static/images/BIG1.jpg", mimetype='image/jpg')
+        return send_file("./static/images/BIG1.jpg", mimetype='image/jpeg')
 
 
 @app.route('/im')

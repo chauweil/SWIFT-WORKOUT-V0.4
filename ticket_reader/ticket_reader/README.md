@@ -54,6 +54,18 @@ Installer le tout en tapant cette ligne de commande
 pod install
 
 ```
+S'il le faut, faire un pod update
+
+```
+pod update
+```
+En cas d'ajout de pod, il  faut juste ajouter la ligne qu'il faut et faire également un
+```
+pod install
+
+```
+
+
 Il faut maintenaint ouvrir le fichier à travers le fichier ```.xcworkspace``` et plus le fichier ```.xcodeproj```.
 
 ### Documentation
