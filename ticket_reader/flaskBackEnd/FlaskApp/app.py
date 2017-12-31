@@ -38,15 +38,20 @@ def get_image2():
     #----------------------  working scikit image
     app.logger.info("SCIKIT-IMAGE")
 
-    image = io.imread(in_memory_file, as_grey=True)
-    atemp = ticket.ticketprocessing(image)
-    b = atemp.cropHF(header, footer)
-    io.imsave('./static/images/temp.jpeg', b)
+    #image = io.imread(in_memory_file, as_grey=True)
+    #atemp = ticket.ticketprocessing(image)
+    #b = atemp.cropHF(header, footer)
+    #io.imsave('./static/images/temp.jpeg', b)
+
+
     #return send_file("./static/images/temp.jpeg", mimetype='image/jpeg')
     #js = json.dumps(db)
     #resp = Response(js, status=200, mimetype='application/json')
     #return resp
-    encoded_string = base64.b64encode(open("./static/images/temp.jpeg", "rb").read())
+
+    #encoded_string = base64.b64encode(open("./static/images/temp.jpeg", "rb").read())
+
+
     #pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
 
     #js = json.dumps(encoded_string.decode('utf-8'))
