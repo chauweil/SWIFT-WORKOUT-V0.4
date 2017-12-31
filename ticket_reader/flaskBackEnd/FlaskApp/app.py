@@ -41,8 +41,8 @@ def get_image2():
     image = io.imread(in_memory_file, as_grey=True)
     atemp = ticket.ticketprocessing(image)
     b = atemp.cropHF(header, footer)
-    io.imsave('./static/images/temp.jpg', b)
-    return send_file("./static/images/temp.jpg", mimetype='image/jpeg')
+    io.imsave('./static/images/temp.jpeg', b)
+    return send_file("./static/images/temp.jpeg", mimetype='image/jpeg')
     #encoded_string = base64.b64encode(open("./static/images/temp.jpg", "rb").read())
     #pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
 
