@@ -137,8 +137,37 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         present(ac, animated: true)
         
         var imageToSave: UIImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        UIImageWriteToSavedPhotosAlbum(imageToSave,nil,nil,nil)
+        //UIImageWriteToSavedPhotosAlbum(imageToSave,nil,nil,nil)
 
+        
+        //let image = UIImage.init(named: "BIG1")
+        let imgData = UIImageJPEGRepresentation(imageToSave, 0.8)!
+        
+        Alamofire.upload(multipartFormData: { multipartFormData in
+            multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpeg")
+        },to:"http://vps447991.ovh.net:5000/upload")
+        { (result) in
+            switch result {
+            case .success(let upload, _, _):
+                
+                upload.uploadProgress(closure: { (progress) in
+                    print("Upload Progress: \(progress.fractionCompleted)")
+                })
+                
+                upload.responseJSON { response in
+                    print("e??")
+                    let data = response.result.value as! String
+                    let dataDecoded : Data = Data(base64Encoded: data, options: .ignoreUnknownCharacters)!
+                    let decodedimage = UIImage(data: dataDecoded)
+                    self.imageTake.image  = decodedimage
+                    self.activityIndicator.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
+                    
+                }
+            case .failure(let error):
+                print("Error in upload: \(error.localizedDescription)")
+            }
+        }
 
     }
 /*
