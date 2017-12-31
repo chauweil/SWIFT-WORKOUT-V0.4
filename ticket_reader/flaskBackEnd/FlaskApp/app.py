@@ -55,16 +55,18 @@ def get_image():
     #---------------------- saving the jpeg
     content = request.files
     app.logger.info(type(content["fileset"]))
-    # app.logger.info(content["file.jpg"])
-    #now = str(datetime.datetime.now())
     f = content["fileset"]
     pickle.dump(f,open( "f.jpeg", "wb" ))
+
+    #----------------------  conv
+    in_memory_file = BytesIO()
+    f.save(in_memory_file)
+    app.logger.info(in_memory_file)
 
     #----------------------  working scikit image
     app.logger.info("SCIKIT-IMAGE")
 
-    in_memory_file = BytesIO()
-    f.save(in_memory_file)
+
 
     image = io.imread(in_memory_file, as_grey=True)
     app.logger.info(type(image))
