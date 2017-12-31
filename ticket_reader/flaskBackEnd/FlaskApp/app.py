@@ -71,8 +71,7 @@ def get_image():
     #image = Image.open(BytesIO(bytearray(data2)))
     image = Image.open(in_memory_file)
     image = io.imread(in_memory_file, as_grey=True)
-
-    app.logger.info(image)
+    app.logger.info(image.shape)
 
     pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
     return "OK",200
