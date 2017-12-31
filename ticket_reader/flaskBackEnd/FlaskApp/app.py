@@ -65,21 +65,19 @@ def get_image():
 
     in_memory_file = BytesIO()
     f.save(in_memory_file)
+
     image = io.imread(in_memory_file, as_grey=True)
     app.logger.info(type(image))
 
     #----------------------  working PIL
     app.logger.info("PIL")
 
-    app.logger.info(image.shape)
-    f.save(in_memory_file)
     image = Image.open(in_memory_file)
     app.logger.info(image)
+
     # ----------------------  convert image to byte
     app.logger.info("BYTES")
 
-    app.logger.info(image.shape)
-    f.save(in_memory_file)
     data2 = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
     app.logger.info(bytearray(data2[:4]))
 
