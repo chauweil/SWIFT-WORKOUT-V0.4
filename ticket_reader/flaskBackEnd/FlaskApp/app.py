@@ -61,7 +61,7 @@ def get_image():
     #----------------------  conv
     in_memory_file = BytesIO()
     f.save(in_memory_file)
-    app.logger.info(in_memory_file)
+    app.logger.info(in_memory_file.getvalue())
 
     #----------------------  working scikit image
     app.logger.info("SCIKIT-IMAGE")
