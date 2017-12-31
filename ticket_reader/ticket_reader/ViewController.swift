@@ -97,7 +97,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         let imgData = UIImageJPEGRepresentation(image!, 0.8)!
         
         Alamofire.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpeg")
+            multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpg")
         },
                          to:"http://vps447991.ovh.net:5000/q")
         { (result) in
