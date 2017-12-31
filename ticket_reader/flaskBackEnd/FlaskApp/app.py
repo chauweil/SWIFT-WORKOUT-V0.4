@@ -50,8 +50,8 @@ def get_image2():
     js = json.dumps(encoded_string.decode('utf-8'))
     resp = Response(js, status=200, mimetype='application/json')
 
-    #js = json.dumps(db)
-    #resp = Response(js, status=200, mimetype='application/json')
+    js = json.dumps(db)
+    resp = Response(js, status=200, mimetype='application/json')
     return resp
 
 @app.route('/')
