@@ -46,7 +46,7 @@ def get_image2():
     #js = json.dumps(db)
     #resp = Response(js, status=200, mimetype='application/json')
     #return resp
-    encoded_string = base64.b64encode(open("./static/images/temp.jpg", "rb").read())
+    encoded_string = base64.b64encode(open("./static/images/temp.jpeg", "rb").read())
     #pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
 
     js = json.dumps(encoded_string.decode('utf-8'))
