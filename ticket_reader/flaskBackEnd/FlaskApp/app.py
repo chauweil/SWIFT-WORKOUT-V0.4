@@ -8,6 +8,7 @@ from logging.handlers import RotatingFileHandler
 from io import BytesIO
 import numpy as np;
 from skimage import img_as_ubyte
+from skimage import io
 
 import json
 
@@ -69,6 +70,7 @@ def get_image():
     #app.logger.info(bytearray(data2))
     #image = Image.open(BytesIO(bytearray(data2)))
     image = Image.open(in_memory_file)
+    img = io.imread(image, as_grey=True)
 
     app.logger.info(image)
 
