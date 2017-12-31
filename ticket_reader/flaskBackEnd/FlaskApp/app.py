@@ -38,10 +38,10 @@ def get_image2():
     #----------------------  working scikit image
     app.logger.info("SCIKIT-IMAGE")
 
-    #image = io.imread(in_memory_file, as_grey=True)
-    #atemp = ticket.ticketprocessing(image)
-    #b = atemp.cropHF(header, footer)
-    #io.imsave('./static/images/temp.jpeg', b)
+    image = io.imread(in_memory_file, as_grey=True)
+    atemp = ticket.ticketprocessing(image)
+    b = atemp.cropHF(header, footer)
+    io.imsave('./static/images/temp.jpeg', b)
 
 
     #return send_file("./static/images/temp.jpeg", mimetype='image/jpeg')
