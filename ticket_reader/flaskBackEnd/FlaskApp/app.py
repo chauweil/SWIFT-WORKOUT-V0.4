@@ -82,7 +82,7 @@ def get_image():
     data2 = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
     app.logger.info(bytearray(data2[:4]))
 
-    pickle.dump(content["fileset"],open( "image.jpg", "wb" ))
+    #pickle.dump(content["fileset"],open( "image.jpg", "wb" ))
     return "OK",200
 
 @app.route('/r', methods=["POST"])
