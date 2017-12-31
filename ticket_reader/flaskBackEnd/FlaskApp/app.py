@@ -50,22 +50,23 @@ def get_name():
 #curl -H "Content-Type: application/json" -X POST -d '{"urname":"xyz","password":"xyz"}' http://localhost:5000/q
 @app.route('/q',methods=["POST"])
 def get_image():
+
+    #---------------------- saving the jpeg
     content = request.files
     app.logger.info(type(content["fileset"]))
-    content["fileset"].save(open('im.p',"wb"))
     # app.logger.info(content["file.jpg"])
-    now = str(datetime.datetime.now())
+    #now = str(datetime.datetime.now())
     f = content["fileset"]
     pickle.dump(f,open( "f.jpeg", "wb" ))
-    app.logger.info(content["fileset"])
 
+    #----------------------  working without saving
     in_memory_file = BytesIO()
     f.save(in_memory_file)
     #image = Image.open(io.BytesIO(image_data))
     data2 = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
-    #im = img_as_ubyte(data2)
+
     im = Image.fromarray(data2)
-    app.logger.info(type(im))
+    app.logger.info(data2)
     pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
     return "OK",200
 
