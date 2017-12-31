@@ -109,7 +109,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
                 
                 upload.responseJSON { response in
                     print("e??")
-                    print(response)
+                    let data = response.result.value as! NSDictionary
+                    print(data)
                 }
             case .failure(let error):
                 print("Error in upload: \(error.localizedDescription)")
