@@ -67,7 +67,6 @@ def get_image():
     app.logger.info("SCIKIT-IMAGE")
 
 
-
     image = io.imread(in_memory_file, as_grey=True)
     app.logger.info(type(image))
 
