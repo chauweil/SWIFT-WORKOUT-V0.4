@@ -56,7 +56,7 @@ def get_image():
     content = request.files
     app.logger.info(type(content["fileset"]))
     f = content["fileset"]
-    pickle.dump(f,open( "f.jpeg", "wb" ))
+    #pickle.dump(f,open( "f.jpeg", "wb" ))
 
     #----------------------  conv
     in_memory_file = BytesIO()

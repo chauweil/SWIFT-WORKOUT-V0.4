@@ -93,7 +93,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
 
     func sentImage() {
         
-        let image = UIImage.init(named: "download")
+        let image = UIImage.init(named: "BIG1")
         let imgData = UIImageJPEGRepresentation(image!, 0.8)!
         
         Alamofire.upload(multipartFormData: { multipartFormData in
