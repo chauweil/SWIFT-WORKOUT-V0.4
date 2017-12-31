@@ -60,18 +60,28 @@ def get_image():
     f = content["fileset"]
     pickle.dump(f,open( "f.jpeg", "wb" ))
 
-    #----------------------  working without saving
+    #----------------------  working scikit image
+    app.logger.info("SCIKIT-IMAGE")
+
     in_memory_file = BytesIO()
     f.save(in_memory_file)
-    #image = Image.open(io.BytesIO(image_data))
-    #data2 = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
-
-    #im = Image.fromarray(data2)
-    #app.logger.info(bytearray(data2))
-    #image = Image.open(BytesIO(bytearray(data2)))
-    image = Image.open(in_memory_file)
     image = io.imread(in_memory_file, as_grey=True)
+    app.logger.info(type(image))
+
+    #----------------------  working PIL
+    app.logger.info("PIL")
+
     app.logger.info(image.shape)
+    f.save(in_memory_file)
+    image = Image.open(in_memory_file)
+    app.logger.info(image)
+    # ----------------------  convert image to byte
+    app.logger.info("BYTES")
+
+    app.logger.info(image.shape)
+    f.save(in_memory_file)
+    data2 = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
+    app.logger.info(bytearray(data2[:4]))
 
     pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
     return "OK",200
