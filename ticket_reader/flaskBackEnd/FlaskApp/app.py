@@ -67,8 +67,9 @@ def get_image():
 
     #im = Image.fromarray(data2)
     app.logger.info(bytearray(data2))
-    app.logger.info(f)
     image = Image.open(BytesIO(bytearray(data2)))
+    image = Image.open(in_memory_file)
+
     app.logger.info(image)
 
     pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
