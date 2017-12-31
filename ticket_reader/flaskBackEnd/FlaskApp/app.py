@@ -42,7 +42,10 @@ def get_image2():
     atemp = ticket.ticketprocessing(image)
     b = atemp.cropHF(header, footer)
     io.imsave('./static/images/temp.jpeg', b)
-    return send_file("./static/images/temp.jpeg", mimetype='image/jpeg')
+    #return send_file("./static/images/temp.jpeg", mimetype='image/jpeg')
+    js = json.dumps(db)
+    resp = Response(js, status=200, mimetype='application/json')
+    return resp
     #encoded_string = base64.b64encode(open("./static/images/temp.jpg", "rb").read())
     #pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
 

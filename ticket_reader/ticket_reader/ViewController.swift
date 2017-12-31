@@ -94,12 +94,11 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     func sentImage() {
         
         let image = UIImage.init(named: "BIG1")
-        let imgData = UIImageJPEGRepresentation(image!, 1)!
+        let imgData = UIImageJPEGRepresentation(image!, 0.8)!
         
         Alamofire.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpeg")
-        },
-                         to:"http://vps447991.ovh.net:5000/upload")
+                                                                    },to:"http://vps447991.ovh.net:5000/upload")
         { (result) in
             switch result {
             case .success(let upload, _, _):
@@ -109,10 +108,11 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
                 })
                 
                 upload.responseJSON { response in
+                    print("e??")
                     print(response.result)
                 }
-            case .failure(let encodingError):
-                print(encodingError)
+            case .failure(let error):
+                print("Error in upload: \(error.localizedDescription)")
             }
     }
         self.activityIndicator.stopAnimating()
