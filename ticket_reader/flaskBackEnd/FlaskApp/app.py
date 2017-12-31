@@ -6,7 +6,7 @@ import numpy as np
 from skimage import io
 import json
 from imageprocessing import ticket
-
+import base64
 
 # -------- module app
 app = Flask(__name__)
@@ -40,8 +40,8 @@ def get_image2():
 
     image = io.imread(in_memory_file, as_grey=True)
     atemp = ticket.ticketprocessing(image)
-    #b = atemp.cropHF(header, footer)
-    #io.imsave('./static/images/temp.jpeg', b)
+    b = atemp.cropHF(header, footer)
+    io.imsave('./static/images/temp.jpeg', b)
 
 
     #return send_file("./static/images/temp.jpeg", mimetype='image/jpeg')
