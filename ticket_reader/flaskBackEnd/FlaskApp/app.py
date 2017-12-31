@@ -61,7 +61,7 @@ def home():
 def get_im2():
         b = a.cropHF(header, footer)
         io.imsave('./static/images/temp.jpg', b)
-        return send_file("./static/images/temp.jpg", mimetype='image/jpeg')
+        return send_file("./static/images/temp.jpeg", mimetype='image/jpeg')
 
 
 @app.route('/name')
