@@ -80,7 +80,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
 
     func getImage() {
                 
-        Alamofire.request("http://vps447991.ovh.net:5000/image").responseImage { response in
+        Alamofire.request("http://vps447991.ovh.net:5000/upload").responseImage { response in
             if let image = response.result.value {
                 print("image downloaded: \(image)")
                 self.imageTake.image  = image

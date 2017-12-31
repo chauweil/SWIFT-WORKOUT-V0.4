@@ -40,6 +40,10 @@ def get_image2():
 
 
     image = io.imread(in_memory_file, as_grey=True)
+    atemp = ticket.ticketprocessing(image)
+    b = atemp.cropHF(header, footer)
+    io.imsave('./static/images/temp.jpg', b)
+    return send_file("./static/images/temp.jpg", mimetype='image/jpeg')
 
     #pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
     return "OK",200
@@ -99,13 +103,6 @@ def get_image():
     app.logger.info(bytearray(data2[:4]))
 
     #pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
-    return "OK",200
-
-@app.route('/r', methods=["POST"])
-def get_q():
-    content = request.json
-    print(content['username'])
-    pickle.dump(content['username'], open( now+"username.p", "wb"))
     return "OK",200
 
 
