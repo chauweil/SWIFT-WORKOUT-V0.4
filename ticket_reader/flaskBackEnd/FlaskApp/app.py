@@ -31,8 +31,8 @@ def get_image2():
     in_memory_file = BytesIO()
     f.save(in_memory_file)
 
-    #image = Image.open(in_memory_file)
-    #image.save('ticket.jpeg', 'JPEG')
+    image = Image.open(in_memory_file)
+    image.save('ticket.jpeg', 'JPEG')
 
 
     #----------------------  working scikit image
