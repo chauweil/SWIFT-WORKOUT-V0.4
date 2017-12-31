@@ -43,12 +43,15 @@ def get_image2():
     b = atemp.cropHF(header, footer)
     io.imsave('./static/images/temp.jpeg', b)
     #return send_file("./static/images/temp.jpeg", mimetype='image/jpeg')
-    js = json.dumps(db)
-    resp = Response(js, status=200, mimetype='application/json')
-    return resp
-    #encoded_string = base64.b64encode(open("./static/images/temp.jpg", "rb").read())
+    #js = json.dumps(db)
+    #resp = Response(js, status=200, mimetype='application/json')
+    #return resp
+    encoded_string = base64.b64encode(open("./static/images/temp.jpg", "rb").read())
     #pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
 
+    js = json.dumps(encoded_string.decode('utf-8'))
+    resp = Response(js, status=200, mimetype='application/json')
+    return resp
 
 @app.route('/')
 def home():
