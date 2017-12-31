@@ -31,13 +31,12 @@ def get_image2():
     in_memory_file = BytesIO()
     f.save(in_memory_file)
 
-    image = Image.open(in_memory_file)
-    image.save('ticket.jpeg', 'JPEG')
+    #image = Image.open(in_memory_file)
+    #image.save('ticket.jpeg', 'JPEG')
 
 
     #----------------------  working scikit image
     app.logger.info("SCIKIT-IMAGE")
-
 
     image = io.imread(in_memory_file, as_grey=True)
     atemp = ticket.ticketprocessing(image)
@@ -46,7 +45,6 @@ def get_image2():
     return send_file("./static/images/temp.jpg", mimetype='image/jpeg')
     #encoded_string = base64.b64encode(open("./static/images/temp.jpg", "rb").read())
     #pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
-    return "OK",200
 
 
 @app.route('/')

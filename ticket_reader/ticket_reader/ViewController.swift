@@ -80,7 +80,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
 
     func getImage() {
                 
-        Alamofire.request("http://vps447991.ovh.net:5000/upload").responseImage { response in
+        Alamofire.request("http://vps447991.ovh.net:5000/image").responseImage { response in
             if let image = response.result.value {
                 print("image downloaded: \(image)")
                 self.imageTake.image  = image
@@ -99,7 +99,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         Alamofire.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpeg")
         },
-                         to:"http://vps447991.ovh.net:5000/q")
+                         to:"http://vps447991.ovh.net:5000/upload")
         { (result) in
             switch result {
             case .success(let upload, _, _):
@@ -109,9 +109,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
                 })
                 
                 upload.responseJSON { response in
-                    print(response.result.value)
+                    print(response.result)
                 }
-                
             case .failure(let encodingError):
                 print(encodingError)
             }
