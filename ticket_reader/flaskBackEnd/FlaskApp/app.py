@@ -1,16 +1,11 @@
-from flask import Flask, jsonify, abort, request, make_response, url_for, render_template, send_file,Response
+from flask import Flask, jsonify, request,  send_file,Response
 from PIL import Image
-import base64
 import pickle
-import datetime
-import logging
-from logging.handlers import RotatingFileHandler
 from io import BytesIO
-import numpy as np;
-from skimage import img_as_ubyte
+import numpy as np
 from skimage import io
-
 import json
+from imageprocessing import ticket
 
 
 # -------- module app
@@ -19,12 +14,36 @@ app = Flask(__name__)
 
 # -------- db load
 db={ 'serie1': 23,'serie2': 22 ,'serie3': 23 ,'serie4': 18 ,'serie5': 23,'id':14 }
-im = Image.open("./static/images/BIG1.jpg")
-#im2 = Image.open("./static/images/download.jpeg")
+a=ticket.ticketprocessing('./static/images/BIG2.jpg')
+header= io.imread('./static/images/header_default.jpg',as_grey=True)
+footer= io.imread('./static/images/footer_default.jpg',as_grey=True)
 
 #encoded_string =  base64.b64encode(open("./static/images/im2.jpeg", "rb").read())
 
 # -------- db load
+@app.route('/upload',methods=["POST"])
+def get_image2():
+
+    #---------------------- saving the jpeg
+    content = request.files
+    f = content["fileset"]
+
+    in_memory_file = BytesIO()
+    f.save(in_memory_file)
+
+    image = Image.open(in_memory_file)
+    image.save('ticket.jpeg', 'JPEG')
+
+
+    #----------------------  working scikit image
+    app.logger.info("SCIKIT-IMAGE")
+
+
+    image = io.imread(in_memory_file, as_grey=True)
+
+    #pickle.dump(content["fileset"],open( "image.jpeg", "wb" ))
+    return "OK",200
+
 
 @app.route('/')
 def home():
@@ -32,14 +51,10 @@ def home():
 
 @app.route('/image')
 def get_im2():
-        return send_file("./static/images/download.jpeg", mimetype='image/jpeg')
+        b = a.cropHF(header, footer)
+        io.imsave('./static/images/temp.jpg', b)
+        return send_file("./static/images/temp.jpg", mimetype='image/jpeg')
 
-
-@app.route('/im')
-def get_im():
-        js = json.dumps(encoded_string.decode('utf-8'))
-        resp = Response(js, status=200, mimetype='application/json')
-        return resp
 
 @app.route('/name')
 def get_name():
