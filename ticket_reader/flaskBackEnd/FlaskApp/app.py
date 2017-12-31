@@ -67,6 +67,7 @@ def get_image():
 
     #im = Image.fromarray(data2)
     app.logger.info(bytearray(data2))
+    app.logger.info(f)
     image = Image.open(BytesIO(bytearray(data2)))
     app.logger.info(image)
 
