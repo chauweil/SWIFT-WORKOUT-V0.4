@@ -109,16 +109,19 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
                 
                 upload.responseJSON { response in
                     print("e??")
-                    let data = response.result.value as! NSDictionary
-                    print(data)
+                    let data = response.result.value as! String
+                    let dataDecoded : Data = Data(base64Encoded: data, options: .ignoreUnknownCharacters)!
+                    let decodedimage = UIImage(data: dataDecoded)
+                    self.imageTake.image  = decodedimage
+                    self.activityIndicator.stopAnimating()
+                    UIApplication.shared.endIgnoringInteractionEvents()
+                    
                 }
             case .failure(let error):
                 print("Error in upload: \(error.localizedDescription)")
             }
     }
-        self.activityIndicator.stopAnimating()
-        UIApplication.shared.endIgnoringInteractionEvents()
-        
+
         
         
         
