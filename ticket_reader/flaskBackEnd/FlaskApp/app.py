@@ -75,6 +75,7 @@ def get_image():
 
     image = Image.open(in_memory_file)
     app.logger.info(image)
+    image.save('ticket.jpeg', 'JPEG')
 
     # ----------------------  convert image to byte
     app.logger.info("BYTES")
