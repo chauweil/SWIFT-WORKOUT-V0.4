@@ -70,7 +70,7 @@ def get_image():
     #app.logger.info(bytearray(data2))
     #image = Image.open(BytesIO(bytearray(data2)))
     image = Image.open(in_memory_file)
-    img = io.imread(image, as_grey=True)
+    image = io.imread(image, as_grey=True)
 
     app.logger.info(image)
 
